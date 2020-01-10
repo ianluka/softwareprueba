@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ninaninut"
+        android:gravity="center"
+        android:text="DONDE VICTOR'S"
+        android:textColor="@color/colorAccent"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="326dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="311dp"
+            android:layout_height="185dp"
+            android:layout_margin="25dp"
+            android:baselineAligned="false"
+            app:srcCompat="@mipmap/dondevictor" />
+
+        <LinearLayout
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btinventario"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/ninaninut"
+                android:onClick="btinvent"
+                android:text="INVENTARIO"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btventas"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/ninaninut"
+                android:onClick="btventas"
+                android:text="CLIENTES"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btfactura"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/ninaninut"
+                android:onClick="btfactura"
+                android:text="FACTURA"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/bthistorial"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="193dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/ninaninut"
+                android:onClick="bthistorial"
+                android:text="HISTORIAL"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

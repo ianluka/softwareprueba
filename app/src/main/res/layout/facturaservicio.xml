@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:layout_margin="2dp"
+    tools:context=".facturaservicio">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/ninaninut"
+                android:textSize="40dp"
+                android:text="FACTURA"
+                android:textStyle="bold"/>
+
+            <RadioGroup
+                android:id="@+id/grupoescoge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                >
+
+                <RadioButton
+                    android:id="@+id/rbventa"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:clickable="true"
+                    android:enabled="true"
+                    android:focusable="auto"
+                    android:fontFamily="@font/ninaninut"
+                    android:text="Venta"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/rbsertec"
+                    android:layout_width="176dp"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:fontFamily="@font/ninaninut"
+                    android:text="Servicio Tecnico"
+                    android:textSize="20dp" />
+
+
+            </RadioGroup>
+
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginBottom="0dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvcedula"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:fontFamily="@font/ninaninut"
+                    android:text="CED O RUC: "
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/etcedula"
+                    android:layout_width="194dp"
+                    android:layout_height="match_parent"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+
+                <ImageButton
+                    android:layout_gravity="center"
+                    android:id="@+id/ibtcheckcliente"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/chequear"
+                    android:onClick="check_cliente" />
+
+
+            </GridLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:fontFamily="@font/ninaninut"
+                android:text="APELLIDOS Y NOMBRES:"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/etapell"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:enabled="false"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginBottom="0dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvimei"
+                    android:layout_width="58dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:fontFamily="@font/ninaninut"
+                    android:gravity="center"
+                    android:text="IMEI: : "
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/etimeiservicio"
+                    android:layout_width="212dp"
+                    android:layout_height="match_parent"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:enabled="false"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:layout_gravity="center"
+                    android:id="@+id/ibtcheckimeiservicio"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/chequear"
+                    android:onClick="check_imei_servicio" />
+
+
+            </GridLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MARCA:"
+                    android:fontFamily="@font/ninaninut"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/etmarcaservicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:layout_gravity="center_horizontal"
+                    android:enabled="false"
+                    android:fontFamily="casual"
+                    android:inputType="textLongMessage|textMultiLine"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvservicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DESCRIPCIÓN DEL SERVICIO:"
+                    android:fontFamily="@font/ninaninut"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/etdescripcionservicio"
+                    android:layout_width="match_parent"
+                    android:textSize="15dp"
+                    android:layout_height="96dp"
+                    android:enabled="false"
+                    android:layout_gravity="center_horizontal"
+                    android:hint="ingrese descripción del servicio"
+                    android:inputType="textLongMessage|textMultiLine"
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VALOR SERVICIO: $"
+                        android:fontFamily="@font/ninaninut"
+                        android:textSize="30dp"/>
+
+                    <EditText
+                        android:id="@+id/etvalorservicio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="casual"
+                        android:textStyle="bold"
+                        android:textSize="22dp"
+                        android:enabled="false"
+                        android:inputType="numberDecimal"
+                        android:hint="00.00"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="229dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ninaninut"
+                        android:gravity="end"
+                        android:text="TOTAL:   $"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvtotal"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:hint="00.00"
+                        android:textStyle="bold"
+                        android:textSize="30dp"
+                        android:fontFamily="@font/ninaninut"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+
+                <ImageButton
+                    android:id="@+id/ibtimprimir"
+                    android:layout_width="70dp"
+                    android:layout_height="65dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/imprimir"
+                    android:enabled="false" />
+
+                <ImageButton
+                    android:id="@+id/ibtmodificar"
+                    android:layout_width="65dp"
+                    android:layout_height="60dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_marginLeft="60dp"
+                    android:background="@drawable/modificar"
+                    android:enabled="false"
+                    android:onClick="modificar"
+                    android:visibility="invisible" />
+
+                <ImageButton
+                    android:layout_marginRight="15dp"
+                    android:id="@+id/ibtlimpiar"
+                    android:layout_width="70dp"
+                    android:layout_height="65dp"
+                    android:layout_row="0"
+                    android:layout_column="3"
+                    android:background="@drawable/limpiar"
+                    android:enabled="false"
+                    android:onClick="limpiar" />
+
+            </GridLayout>
+
+            <ImageButton
+                android:id="@+id/ibtregresar"
+                android:layout_width="70dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:background="@drawable/regresar"
+                android:onClick="regresar" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
